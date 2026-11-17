@@ -1,0 +1,1452 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>MainWindow</class>
+  <widget class="QMainWindow" name="MainWindow">
+    <property name="windowTitle">
+      <string>Excel Compare Pro | 엑셀 데이터 비교·불일치 분석</string>
+    </property>
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1530</width>
+        <height>950</height>
+      </rect>
+    </property>
+    <property name="minimumSize">
+      <size>
+        <width>1180</width>
+        <height>720</height>
+      </size>
+    </property>
+    <widget class="QWidget" name="centralwidget">
+      <layout class="QHBoxLayout" name="rootLayout">
+        <property name="spacing">
+          <number>0</number>
+        </property>
+        <property name="leftMargin">
+          <number>0</number>
+        </property>
+        <property name="topMargin">
+          <number>0</number>
+        </property>
+        <property name="rightMargin">
+          <number>0</number>
+        </property>
+        <property name="bottomMargin">
+          <number>0</number>
+        </property>
+        <item>
+          <widget class="QFrame" name="sidebar">
+            <layout class="QVBoxLayout" name="sidebarLayout">
+              <property name="spacing">
+                <number>15</number>
+              </property>
+              <property name="leftMargin">
+                <number>22</number>
+              </property>
+              <property name="topMargin">
+                <number>32</number>
+              </property>
+              <property name="rightMargin">
+                <number>22</number>
+              </property>
+              <property name="bottomMargin">
+                <number>26</number>
+              </property>
+              <item>
+                <widget class="QLabel" name="appMark">
+                  <property name="text">
+                    <string>▦  EXCEL COMPARE</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QLabel" name="appEdition">
+                  <property name="text">
+                    <string>PRO  ·  DESKTOP</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <spacer name="spacer8">
+                  <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                    <size>
+                      <width>20</width>
+                      <height>25</height>
+                    </size>
+                  </property>
+                </spacer>
+              </item>
+              <item>
+                <widget class="QLabel" name="navSection">
+                  <property name="text">
+                    <string>작업 메뉴</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QPushButton" name="btnNavCompare">
+                  <property name="text">
+                    <string>▣   비교 분석</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QPushButton" name="btnNavExport">
+                  <property name="text">
+                    <string>⇩   결과 저장</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QPushButton" name="btnNavHelp">
+                  <property name="text">
+                    <string>ⓘ   사용 방법</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <spacer name="spacer13">
+                  <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                    <size>
+                      <width>20</width>
+                      <height>10</height>
+                    </size>
+                  </property>
+                </spacer>
+              </item>
+              <item>
+                <widget class="QLabel" name="navSpacer">
+                  <property name="text">
+                    <string />
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <spacer name="spacer15">
+                  <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                    <size>
+                      <width>20</width>
+                      <height>200</height>
+                    </size>
+                  </property>
+                </spacer>
+              </item>
+              <item>
+                <widget class="QLabel" name="sideFoot">
+                  <property name="text">
+                    <string>EXCEL COMPARE PRO</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QLabel" name="sideFoot2">
+                  <property name="text">
+                    <string>파일은 PC에서 처리됩니다</string>
+                  </property>
+                </widget>
+              </item>
+            </layout>
+            <property name="minimumSize">
+              <size>
+                <width>220</width>
+                <height>0</height>
+              </size>
+            </property>
+            <property name="maximumSize">
+              <size>
+                <width>220</width>
+                <height>16777215</height>
+              </size>
+            </property>
+          </widget>
+        </item>
+        <item>
+          <widget class="QFrame" name="mainArea">
+            <layout class="QVBoxLayout" name="mainAreaLayout">
+              <property name="spacing">
+                <number>15</number>
+              </property>
+              <property name="leftMargin">
+                <number>24</number>
+              </property>
+              <property name="topMargin">
+                <number>25</number>
+              </property>
+              <property name="rightMargin">
+                <number>26</number>
+              </property>
+              <property name="bottomMargin">
+                <number>20</number>
+              </property>
+              <item>
+                <layout class="QHBoxLayout" name="headerLayout">
+                  <property name="spacing">
+                    <number>8</number>
+                  </property>
+                  <property name="leftMargin">
+                    <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                    <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                    <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                    <number>0</number>
+                  </property>
+                  <item>
+                    <layout class="QVBoxLayout" name="headerTextLayout">
+                      <property name="spacing">
+                        <number>4</number>
+                      </property>
+                      <property name="leftMargin">
+                        <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                        <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                        <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                        <number>0</number>
+                      </property>
+                      <item>
+                        <widget class="QLabel" name="pageTitle">
+                          <property name="text">
+                            <string>엑셀 데이터 비교 · 불일치 분석</string>
+                          </property>
+                        </widget>
+                      </item>
+                      <item>
+                        <widget class="QLabel" name="pageSubtitle">
+                          <property name="text">
+                            <string>두 Excel 파일에서 추가·누락·변경된 데이터를 빠르게 확인하세요.</string>
+                          </property>
+                        </widget>
+                      </item>
+                    </layout>
+                  </item>
+                  <item>
+                    <widget class="QLabel" name="versionLabel">
+                      <property name="text">
+                        <string>●  준비됨  ·  v1.0</string>
+                      </property>
+                    </widget>
+                  </item>
+                </layout>
+              </item>
+              <item>
+                <widget class="QFrame" name="cardFiles">
+                  <layout class="QVBoxLayout" name="cardFilesLayout">
+                    <property name="spacing">
+                      <number>13</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>20</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>17</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>20</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>18</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="sectionFiles">
+                        <property name="text">
+                          <string>01   비교할 파일 선택</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <layout class="QHBoxLayout" name="filesRow">
+                        <property name="spacing">
+                          <number>14</number>
+                        </property>
+                        <property name="leftMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                          <number>0</number>
+                        </property>
+                        <item>
+                          <widget class="QFrame" name="fileA">
+                            <layout class="QVBoxLayout" name="fileALayout">
+                              <property name="spacing">
+                                <number>9</number>
+                              </property>
+                              <property name="leftMargin">
+                                <number>15</number>
+                              </property>
+                              <property name="topMargin">
+                                <number>12</number>
+                              </property>
+                              <property name="rightMargin">
+                                <number>15</number>
+                              </property>
+                              <property name="bottomMargin">
+                                <number>14</number>
+                              </property>
+                              <item>
+                                <layout class="QHBoxLayout" name="fileTopA">
+                                  <property name="spacing">
+                                    <number>8</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <item>
+                                    <widget class="QLabel" name="fileBadgeA">
+                                      <property name="text">
+                                        <string>A</string>
+                                      </property>
+                                    </widget>
+                                  </item>
+                                  <item>
+                                    <layout class="QVBoxLayout" name="fileInfoA">
+                                      <property name="spacing">
+                                        <number>2</number>
+                                      </property>
+                                      <property name="leftMargin">
+                                        <number>0</number>
+                                      </property>
+                                      <property name="topMargin">
+                                        <number>0</number>
+                                      </property>
+                                      <property name="rightMargin">
+                                        <number>0</number>
+                                      </property>
+                                      <property name="bottomMargin">
+                                        <number>0</number>
+                                      </property>
+                                      <item>
+                                        <widget class="QLabel" name="fileTitleA">
+                                          <property name="text">
+                                            <string>기준 파일 (A)</string>
+                                          </property>
+                                        </widget>
+                                      </item>
+                                      <item>
+                                        <widget class="QLabel" name="fileDescA">
+                                          <property name="text">
+                                            <string>비교의 기준이 되는 Excel 파일</string>
+                                          </property>
+                                        </widget>
+                                      </item>
+                                    </layout>
+                                  </item>
+                                </layout>
+                              </item>
+                              <item>
+                                <layout class="QHBoxLayout" name="pickA">
+                                  <property name="spacing">
+                                    <number>8</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <item>
+                                    <widget class="QLineEdit" name="editPathA">
+                                      <property name="placeholderText">
+                                        <string>파일을 선택하세요</string>
+                                      </property>
+                                      <property name="readOnly">
+                                        <bool>true</bool>
+                                      </property>
+                                    </widget>
+                                  </item>
+                                  <item>
+                                    <widget class="QPushButton" name="btnFileA">
+                                      <property name="text">
+                                        <string>찾아보기</string>
+                                      </property>
+                                      <property name="minimumSize">
+                                        <size>
+                                          <width>88</width>
+                                          <height>0</height>
+                                        </size>
+                                      </property>
+                                    </widget>
+                                  </item>
+                                </layout>
+                              </item>
+                              <item>
+                                <layout class="QHBoxLayout" name="sheetRowA">
+                                  <property name="spacing">
+                                    <number>8</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <item>
+                                    <widget class="QLabel" name="labelSheetA">
+                                      <property name="text">
+                                        <string>시트</string>
+                                      </property>
+                                    </widget>
+                                  </item>
+                                  <item>
+                                    <widget class="QComboBox" name="comboSheetA">
+                                      <item>
+                                        <property name="text">
+                                          <string>파일을 먼저 선택하세요</string>
+                                        </property>
+                                      </item>
+                                    </widget>
+                                  </item>
+                                  <item>
+                                    <widget class="QLabel" name="labelHeaderA">
+                                      <property name="text">
+                                        <string>헤더 행</string>
+                                      </property>
+                                    </widget>
+                                  </item>
+                                  <item>
+                                    <widget class="QSpinBox" name="spinHeaderA">
+                                      <property name="minimum">
+                                        <number>1</number>
+                                      </property>
+                                      <property name="maximum">
+                                        <number>100</number>
+                                      </property>
+                                      <property name="value">
+                                        <number>1</number>
+                                      </property>
+                                      <property name="minimumSize">
+                                        <size>
+                                          <width>70</width>
+                                          <height>0</height>
+                                        </size>
+                                      </property>
+                                    </widget>
+                                  </item>
+                                </layout>
+                              </item>
+                            </layout>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QFrame" name="fileB">
+                            <layout class="QVBoxLayout" name="fileBLayout">
+                              <property name="spacing">
+                                <number>9</number>
+                              </property>
+                              <property name="leftMargin">
+                                <number>15</number>
+                              </property>
+                              <property name="topMargin">
+                                <number>12</number>
+                              </property>
+                              <property name="rightMargin">
+                                <number>15</number>
+                              </property>
+                              <property name="bottomMargin">
+                                <number>14</number>
+                              </property>
+                              <item>
+                                <layout class="QHBoxLayout" name="fileTopB">
+                                  <property name="spacing">
+                                    <number>8</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <item>
+                                    <widget class="QLabel" name="fileBadgeB">
+                                      <property name="text">
+                                        <string>B</string>
+                                      </property>
+                                    </widget>
+                                  </item>
+                                  <item>
+                                    <layout class="QVBoxLayout" name="fileInfoB">
+                                      <property name="spacing">
+                                        <number>2</number>
+                                      </property>
+                                      <property name="leftMargin">
+                                        <number>0</number>
+                                      </property>
+                                      <property name="topMargin">
+                                        <number>0</number>
+                                      </property>
+                                      <property name="rightMargin">
+                                        <number>0</number>
+                                      </property>
+                                      <property name="bottomMargin">
+                                        <number>0</number>
+                                      </property>
+                                      <item>
+                                        <widget class="QLabel" name="fileTitleB">
+                                          <property name="text">
+                                            <string>대상 파일 (B)</string>
+                                          </property>
+                                        </widget>
+                                      </item>
+                                      <item>
+                                        <widget class="QLabel" name="fileDescB">
+                                          <property name="text">
+                                            <string>변경 여부를 확인할 Excel 파일</string>
+                                          </property>
+                                        </widget>
+                                      </item>
+                                    </layout>
+                                  </item>
+                                </layout>
+                              </item>
+                              <item>
+                                <layout class="QHBoxLayout" name="pickB">
+                                  <property name="spacing">
+                                    <number>8</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <item>
+                                    <widget class="QLineEdit" name="editPathB">
+                                      <property name="placeholderText">
+                                        <string>파일을 선택하세요</string>
+                                      </property>
+                                      <property name="readOnly">
+                                        <bool>true</bool>
+                                      </property>
+                                    </widget>
+                                  </item>
+                                  <item>
+                                    <widget class="QPushButton" name="btnFileB">
+                                      <property name="text">
+                                        <string>찾아보기</string>
+                                      </property>
+                                      <property name="minimumSize">
+                                        <size>
+                                          <width>88</width>
+                                          <height>0</height>
+                                        </size>
+                                      </property>
+                                    </widget>
+                                  </item>
+                                </layout>
+                              </item>
+                              <item>
+                                <layout class="QHBoxLayout" name="sheetRowB">
+                                  <property name="spacing">
+                                    <number>8</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                    <number>0</number>
+                                  </property>
+                                  <item>
+                                    <widget class="QLabel" name="labelSheetB">
+                                      <property name="text">
+                                        <string>시트</string>
+                                      </property>
+                                    </widget>
+                                  </item>
+                                  <item>
+                                    <widget class="QComboBox" name="comboSheetB">
+                                      <item>
+                                        <property name="text">
+                                          <string>파일을 먼저 선택하세요</string>
+                                        </property>
+                                      </item>
+                                    </widget>
+                                  </item>
+                                  <item>
+                                    <widget class="QLabel" name="labelHeaderB">
+                                      <property name="text">
+                                        <string>헤더 행</string>
+                                      </property>
+                                    </widget>
+                                  </item>
+                                  <item>
+                                    <widget class="QSpinBox" name="spinHeaderB">
+                                      <property name="minimum">
+                                        <number>1</number>
+                                      </property>
+                                      <property name="maximum">
+                                        <number>100</number>
+                                      </property>
+                                      <property name="value">
+                                        <number>1</number>
+                                      </property>
+                                      <property name="minimumSize">
+                                        <size>
+                                          <width>70</width>
+                                          <height>0</height>
+                                        </size>
+                                      </property>
+                                    </widget>
+                                  </item>
+                                </layout>
+                              </item>
+                            </layout>
+                          </widget>
+                        </item>
+                      </layout>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item>
+                <widget class="QFrame" name="cardRules">
+                  <layout class="QVBoxLayout" name="cardRulesLayout">
+                    <property name="spacing">
+                      <number>12</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>20</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>17</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>20</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>18</number>
+                    </property>
+                    <item>
+                      <layout class="QHBoxLayout" name="rulesTitleRow">
+                        <property name="spacing">
+                          <number>8</number>
+                        </property>
+                        <property name="leftMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                          <number>0</number>
+                        </property>
+                        <item>
+                          <widget class="QLabel" name="sectionRules">
+                            <property name="text">
+                              <string>02   비교 기준 설정</string>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QLabel" name="ruleNote">
+                            <property name="text">
+                              <string>식별 키가 같은 행끼리 비교합니다</string>
+                            </property>
+                          </widget>
+                        </item>
+                      </layout>
+                    </item>
+                    <item>
+                      <layout class="QVBoxLayout" name="keyRow">
+                        <property name="spacing">
+                          <number>10</number>
+                        </property>
+                        <property name="leftMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                          <number>0</number>
+                        </property>
+                        <item>
+                          <layout class="QGridLayout" name="keyConditionsGrid">
+                            <item row="0" column="1">
+                              <widget class="QLabel" name="conditionLabel1">
+                                <property name="text">
+                                  <string>조건1 (필수)</string>
+                                </property>
+                              </widget>
+                            </item>
+                            <item row="0" column="2">
+                              <widget class="QLabel" name="conditionLabel2">
+                                <property name="text">
+                                  <string>조건2 (선택)</string>
+                                </property>
+                              </widget>
+                            </item>
+                            <item row="0" column="3">
+                              <widget class="QLabel" name="conditionLabel3">
+                                <property name="text">
+                                  <string>조건3 (선택)</string>
+                                </property>
+                              </widget>
+                            </item>
+                            <item row="0" column="4">
+                              <widget class="QLabel" name="conditionLabel4">
+                                <property name="text">
+                                  <string>조건4 (선택)</string>
+                                </property>
+                              </widget>
+                            </item>
+                            <item row="1" column="0">
+                              <widget class="QLabel" name="labelKeyA">
+                                <property name="text">
+                                  <string>기준파일</string>
+                                </property>
+                              </widget>
+                            </item>
+                            <item row="1" column="1">
+                              <widget class="QComboBox" name="comboKeyA">
+                                <item>
+                                  <property name="text">
+                                    <string>파일 선택 후 열 표시</string>
+                                  </property>
+                                </item>
+                              </widget>
+                            </item>
+                            <item row="1" column="2">
+                              <widget class="QComboBox" name="comboKeyA2">
+                                <item>
+                                  <property name="text">
+                                    <string>선택 안 함</string>
+                                  </property>
+                                </item>
+                              </widget>
+                            </item>
+                            <item row="1" column="3">
+                              <widget class="QComboBox" name="comboKeyA3">
+                                <item>
+                                  <property name="text">
+                                    <string>선택 안 함</string>
+                                  </property>
+                                </item>
+                              </widget>
+                            </item>
+                            <item row="1" column="4">
+                              <widget class="QComboBox" name="comboKeyA4">
+                                <item>
+                                  <property name="text">
+                                    <string>선택 안 함</string>
+                                  </property>
+                                </item>
+                              </widget>
+                            </item>
+                            <item row="2" column="0">
+                              <widget class="QLabel" name="labelKeyB">
+                                <property name="text">
+                                  <string>대상파일</string>
+                                </property>
+                              </widget>
+                            </item>
+                            <item row="2" column="1">
+                              <widget class="QComboBox" name="comboKeyB">
+                                <item>
+                                  <property name="text">
+                                    <string>파일 선택 후 열 표시</string>
+                                  </property>
+                                </item>
+                              </widget>
+                            </item>
+                            <item row="2" column="2">
+                              <widget class="QComboBox" name="comboKeyB2">
+                                <item>
+                                  <property name="text">
+                                    <string>선택 안 함</string>
+                                  </property>
+                                </item>
+                              </widget>
+                            </item>
+                            <item row="2" column="3">
+                              <widget class="QComboBox" name="comboKeyB3">
+                                <item>
+                                  <property name="text">
+                                    <string>선택 안 함</string>
+                                  </property>
+                                </item>
+                              </widget>
+                            </item>
+                            <item row="2" column="4">
+                              <widget class="QComboBox" name="comboKeyB4">
+                                <item>
+                                  <property name="text">
+                                    <string>선택 안 함</string>
+                                  </property>
+                                </item>
+                              </widget>
+                            </item>
+                          </layout>
+                        </item>
+                        <item>
+                          <layout class="QVBoxLayout" name="compareColsLayout">
+                            <property name="spacing">
+                              <number>5</number>
+                            </property>
+                            <property name="leftMargin">
+                              <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                              <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                              <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                              <number>0</number>
+                            </property>
+                            <item>
+                              <widget class="QPushButton" name="btnCompareFields">
+                                <property name="text">
+                                  <string>비교 열 선택</string>
+                                </property>
+                              </widget>
+                            </item>
+                            <item>
+                              <widget class="QLabel" name="labelFields">
+                                <property name="text">
+                                  <string>비교할 열 (선택 사항)</string>
+                                </property>
+                              </widget>
+                            </item>
+                            <item>
+                              <widget class="QLineEdit" name="editCompareFields">
+                                <property name="placeholderText">
+                                  <string>미선택 시 식별 키의 존재 여부만 비교</string>
+                                </property>
+                              </widget>
+                            </item>
+                          </layout>
+                        </item>
+                      </layout>
+                    </item>
+                    <item>
+                      <layout class="QHBoxLayout" name="optionsRow">
+                        <property name="spacing">
+                          <number>18</number>
+                        </property>
+                        <property name="leftMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                          <number>0</number>
+                        </property>
+                        <item>
+                          <widget class="QCheckBox" name="checkTrim">
+                            <property name="text">
+                              <string>앞뒤 공백 무시</string>
+                            </property>
+                            <property name="checked">
+                              <bool>true</bool>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QCheckBox" name="checkCase">
+                            <property name="text">
+                              <string>영문 대소문자 구분</string>
+                            </property>
+                            <property name="checked">
+                              <bool>false</bool>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QCheckBox" name="checkBlank">
+                            <property name="text">
+                              <string>빈 값과 공백 동일 취급</string>
+                            </property>
+                            <property name="checked">
+                              <bool>true</bool>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <spacer name="spacer9">
+                            <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                              <size>
+                                <width>40</width>
+                                <height>8</height>
+                              </size>
+                            </property>
+                          </spacer>
+                        </item>
+                        <item>
+                          <widget class="QPushButton" name="btnReset">
+                            <property name="text">
+                              <string>초기화</string>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QPushButton" name="btnCompare">
+                            <property name="text">
+                              <string>▶   비교 실행</string>
+                            </property>
+                            <property name="minimumSize">
+                              <size>
+                                <width>152</width>
+                                <height>0</height>
+                              </size>
+                            </property>
+                          </widget>
+                        </item>
+                      </layout>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item>
+                <layout class="QHBoxLayout" name="summaryRow">
+                  <property name="spacing">
+                    <number>10</number>
+                  </property>
+                  <property name="leftMargin">
+                    <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                    <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                    <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                    <number>0</number>
+                  </property>
+                  <item>
+                    <widget class="QFrame" name="metricTotal">
+                      <layout class="QVBoxLayout" name="metricTotalLayout">
+                        <property name="spacing">
+                          <number>4</number>
+                        </property>
+                        <property name="leftMargin">
+                          <number>18</number>
+                        </property>
+                        <property name="topMargin">
+                          <number>12</number>
+                        </property>
+                        <property name="rightMargin">
+                          <number>12</number>
+                        </property>
+                        <property name="bottomMargin">
+                          <number>12</number>
+                        </property>
+                        <item>
+                          <widget class="QLabel" name="metricNumTotal">
+                            <property name="text">
+                              <string>0</string>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QLabel" name="metricTitleTotal">
+                            <property name="text">
+                              <string>전체 키</string>
+                            </property>
+                          </widget>
+                        </item>
+                      </layout>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="QFrame" name="metricSame">
+                      <layout class="QVBoxLayout" name="metricSameLayout">
+                        <property name="spacing">
+                          <number>4</number>
+                        </property>
+                        <property name="leftMargin">
+                          <number>18</number>
+                        </property>
+                        <property name="topMargin">
+                          <number>12</number>
+                        </property>
+                        <property name="rightMargin">
+                          <number>12</number>
+                        </property>
+                        <property name="bottomMargin">
+                          <number>12</number>
+                        </property>
+                        <item>
+                          <widget class="QLabel" name="metricNumSame">
+                            <property name="text">
+                              <string>0</string>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QLabel" name="metricTitleSame">
+                            <property name="text">
+                              <string>일치</string>
+                            </property>
+                          </widget>
+                        </item>
+                      </layout>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="QFrame" name="metricDifferent">
+                      <layout class="QVBoxLayout" name="metricDifferentLayout">
+                        <property name="spacing">
+                          <number>4</number>
+                        </property>
+                        <property name="leftMargin">
+                          <number>18</number>
+                        </property>
+                        <property name="topMargin">
+                          <number>12</number>
+                        </property>
+                        <property name="rightMargin">
+                          <number>12</number>
+                        </property>
+                        <property name="bottomMargin">
+                          <number>12</number>
+                        </property>
+                        <item>
+                          <widget class="QLabel" name="metricNumDifferent">
+                            <property name="text">
+                              <string>0</string>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QLabel" name="metricTitleDifferent">
+                            <property name="text">
+                              <string>값 불일치</string>
+                            </property>
+                          </widget>
+                        </item>
+                      </layout>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="QFrame" name="metricOnlyA">
+                      <layout class="QVBoxLayout" name="metricOnlyALayout">
+                        <property name="spacing">
+                          <number>4</number>
+                        </property>
+                        <property name="leftMargin">
+                          <number>18</number>
+                        </property>
+                        <property name="topMargin">
+                          <number>12</number>
+                        </property>
+                        <property name="rightMargin">
+                          <number>12</number>
+                        </property>
+                        <property name="bottomMargin">
+                          <number>12</number>
+                        </property>
+                        <item>
+                          <widget class="QLabel" name="metricNumOnlyA">
+                            <property name="text">
+                              <string>0</string>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QLabel" name="metricTitleOnlyA">
+                            <property name="text">
+                              <string>A에만 존재</string>
+                            </property>
+                          </widget>
+                        </item>
+                      </layout>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="QFrame" name="metricOnlyB">
+                      <layout class="QVBoxLayout" name="metricOnlyBLayout">
+                        <property name="spacing">
+                          <number>4</number>
+                        </property>
+                        <property name="leftMargin">
+                          <number>18</number>
+                        </property>
+                        <property name="topMargin">
+                          <number>12</number>
+                        </property>
+                        <property name="rightMargin">
+                          <number>12</number>
+                        </property>
+                        <property name="bottomMargin">
+                          <number>12</number>
+                        </property>
+                        <item>
+                          <widget class="QLabel" name="metricNumOnlyB">
+                            <property name="text">
+                              <string>0</string>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QLabel" name="metricTitleOnlyB">
+                            <property name="text">
+                              <string>B에만 존재</string>
+                            </property>
+                          </widget>
+                        </item>
+                      </layout>
+                    </widget>
+                  </item>
+                </layout>
+              </item>
+              <item>
+                <widget class="QFrame" name="cardResults">
+                  <layout class="QVBoxLayout" name="cardResultsLayout">
+                    <property name="spacing">
+                      <number>12</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>18</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>16</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>18</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>16</number>
+                    </property>
+                    <item>
+                      <layout class="QHBoxLayout" name="resultTitleRow">
+                        <property name="spacing">
+                          <number>12</number>
+                        </property>
+                        <property name="leftMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                          <number>0</number>
+                        </property>
+                        <item>
+                          <layout class="QVBoxLayout" name="resLeft">
+                            <property name="spacing">
+                              <number>4</number>
+                            </property>
+                            <property name="leftMargin">
+                              <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                              <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                              <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                              <number>0</number>
+                            </property>
+                            <item>
+                              <widget class="QLabel" name="sectionResults">
+                                <property name="text">
+                                  <string>03   비교 결과</string>
+                                </property>
+                              </widget>
+                            </item>
+                            <item>
+                              <widget class="QLabel" name="resultDescription">
+                                <property name="text">
+                                  <string>비교를 실행하면 결과가 아래 표에 표시됩니다.</string>
+                                </property>
+                              </widget>
+                            </item>
+                          </layout>
+                        </item>
+                        <item>
+                          <widget class="QComboBox" name="comboFilter">
+                            <item>
+                              <property name="text">
+                                <string>전체 상태</string>
+                              </property>
+                            </item>
+                            <item>
+                              <property name="text">
+                                <string>값 불일치</string>
+                              </property>
+                            </item>
+                            <item>
+                              <property name="text">
+                                <string>A에만 존재</string>
+                              </property>
+                            </item>
+                            <item>
+                              <property name="text">
+                                <string>B에만 존재</string>
+                              </property>
+                            </item>
+                            <item>
+                              <property name="text">
+                                <string>일치</string>
+                              </property>
+                            </item>
+                            <item>
+                              <property name="text">
+                                <string>중복 키</string>
+                              </property>
+                            </item>
+                            <item>
+                              <property name="text">
+                                <string>키 누락</string>
+                              </property>
+                            </item>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QLineEdit" name="editSearch">
+                            <property name="placeholderText">
+                              <string>식별 키 / 열 이름 / 값 검색</string>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QPushButton" name="btnExport">
+                            <property name="text">
+                              <string>⇩  Excel 저장</string>
+                            </property>
+                            <property name="minimumSize">
+                              <size>
+                                <width>122</width>
+                                <height>0</height>
+                              </size>
+                            </property>
+                          </widget>
+                        </item>
+                      </layout>
+                    </item>
+                    <item>
+                      <widget class="QTableWidget" name="resultTable">
+                        <property name="alternatingRowColors">
+                          <bool>true</bool>
+                        </property>
+                        <property name="editTriggers">
+                          <enum>QAbstractItemView::NoEditTriggers</enum>
+                        </property>
+                        <property name="selectionBehavior">
+                          <enum>QAbstractItemView::SelectRows</enum>
+                        </property>
+                        <property name="selectionMode">
+                          <enum>QAbstractItemView::SingleSelection</enum>
+                        </property>
+                        <property name="sortingEnabled">
+                          <bool>true</bool>
+                        </property>
+                        <column>
+                          <property name="text">
+                            <string>상태</string>
+                          </property>
+                        </column>
+                        <column>
+                          <property name="text">
+                            <string>식별 키</string>
+                          </property>
+                        </column>
+                        <column>
+                          <property name="text">
+                            <string>비교 열</string>
+                          </property>
+                        </column>
+                        <column>
+                          <property name="text">
+                            <string>A (기준 파일)</string>
+                          </property>
+                        </column>
+                        <column>
+                          <property name="text">
+                            <string>B (대상 파일)</string>
+                          </property>
+                        </column>
+                        <column>
+                          <property name="text">
+                            <string>상세 내용</string>
+                          </property>
+                        </column>
+                      </widget>
+                    </item>
+                    <item>
+                      <layout class="QHBoxLayout" name="resultsFooter">
+                        <property name="spacing">
+                          <number>8</number>
+                        </property>
+                        <property name="leftMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                          <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                          <number>0</number>
+                        </property>
+                        <item>
+                          <widget class="QLabel" name="labelResultCount">
+                            <property name="text">
+                              <string>표시 결과: 0건</string>
+                            </property>
+                          </widget>
+                        </item>
+                        <item>
+                          <spacer name="spacer7">
+                            <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                              <size>
+                                <width>20</width>
+                                <height>8</height>
+                              </size>
+                            </property>
+                          </spacer>
+                        </item>
+                        <item>
+                          <widget class="QLabel" name="labelResultTip">
+                            <property name="text">
+                              <string>※ 식별 키는 중복되지 않는 열을 선택하세요.</string>
+                            </property>
+                          </widget>
+                        </item>
+                      </layout>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item>
+                <layout class="QHBoxLayout" name="bottomRow">
+                  <property name="spacing">
+                    <number>8</number>
+                  </property>
+                  <property name="leftMargin">
+                    <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                    <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                    <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                    <number>0</number>
+                  </property>
+                  <item>
+                    <widget class="QLabel" name="statusLabel">
+                      <property name="text">
+                        <string>●  파일을 선택하고 비교를 실행해 주세요.</string>
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <spacer name="spacer7">
+                      <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                        <size>
+                          <width>100</width>
+                          <height>8</height>
+                        </size>
+                      </property>
+                    </spacer>
+                  </item>
+                  <item>
+                    <widget class="QLabel" name="localLabel">
+                      <property name="text">
+                        <string>로컬 처리  ·  데이터 서버 전송 없음</string>
+                      </property>
+                    </widget>
+                  </item>
+                </layout>
+              </item>
+            </layout>
+          </widget>
+        </item>
+      </layout>
+    </widget>
+  </widget>
+  <resources />
+  <connections />
+</ui>

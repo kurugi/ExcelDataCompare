@@ -1,0 +1,51 @@
+QMainWindow, QWidget#centralwidget { background: #F4F7FC; color: #1A2840; font-family: "Malgun Gothic", "Noto Sans CJK KR", "Segoe UI"; font-size: 12px; }
+QFrame#sidebar { background: #101E35; border: none; }
+QLabel#appMark {color: #F7FAFF; font-size: 16px; font-weight: 800;}
+QLabel#appEdition {color: #74A3D9; font-size: 11px; font-weight: 700; letter-spacing: 1px;}
+QLabel#navSection {color: #7E92AF; font-size: 11px; font-weight: 600; margin-top: 8px; margin-bottom: 4px;}
+QPushButton#btnNavCompare, QPushButton#btnNavExport, QPushButton#btnNavHelp {border:0; background: transparent; color: #B9C8DE; padding: 15px 13px; text-align: left; border-radius: 9px; font-size: 13px;}
+QPushButton#btnNavCompare { color: #FFFFFF; background: #2563EB; font-weight: 700; }
+QPushButton#btnNavExport:hover, QPushButton#btnNavHelp:hover {background: #243651; color: white;}
+QLabel#sideFoot { color: #7B8BA3; font-size: 11px; font-weight: 700; }
+QLabel#sideFoot2 {color: #6E839E; font-size: 10px;}
+QFrame#mainArea {border: none; background: #F4F7FC;}
+QLabel#pageTitle {color: #192943; font-size: 24px; font-weight: 800;}
+QLabel#pageSubtitle { color: #748199; font-size: 12px; }
+QLabel#versionLabel { color: #12856C; background: #E5F6EF; border: 1px solid #CFEBE0; border-radius: 13px; padding: 8px 11px; font-size: 11px; font-weight: 700; }
+QFrame#cardFiles, QFrame#cardRules, QFrame#cardResults, QFrame#metricTotal, QFrame#metricSame, QFrame#metricDifferent, QFrame#metricOnlyA, QFrame#metricOnlyB { background: #FFFFFF; border: 1px solid #E3EAF3; border-radius: 14px; }
+QLabel#sectionFiles, QLabel#sectionRules, QLabel#sectionResults {color: #213655; font-size: 14px; font-weight: 800;}
+QFrame#fileA, QFrame#fileB { background:#F8FAFD; border: 1px solid #E4EBF4; border-radius: 10px; }
+QLabel#fileBadgeA, QLabel#fileBadgeB { color: white; background: #2463E8; padding: 9px 12px; border-radius: 7px; font-size: 14px; font-weight: 800; }
+QLabel#fileBadgeB {background:#159E93;}
+QLabel#fileTitleA, QLabel#fileTitleB {color:#253754; font-weight:800; font-size:12px;}
+QLabel#fileDescA, QLabel#fileDescB {color:#8A97AB; font-size: 11px;}
+QLabel#labelSheetA, QLabel#labelSheetB, QLabel#labelHeaderA, QLabel#labelHeaderB, QLabel#labelKeyA, QLabel#labelKeyB, QLabel#labelFields { color:#5E6D85; font-size: 11px; font-weight: 700; }
+QLabel#ruleNote, QLabel#resultDescription {color:#8A97AA; font-size:11px;}
+QLineEdit, QComboBox, QSpinBox {background: #FFFFFF; border: 1px solid #D8E1EC; border-radius: 7px; padding: 8px 10px; min-height: 18px; color:#233650; selection-background-color:#BFD5FF;}
+QLineEdit:focus, QComboBox:focus, QSpinBox:focus { border: 1px solid #5289F4; }
+QLineEdit:read-only {background:#F6F8FC; color:#5F6F85;}
+QCheckBox { color:#50617A; spacing: 7px; font-size: 11px; }
+QPushButton {background: #F2F6FB; color:#395373; border:1px solid #DCE6F1; border-radius: 8px; padding: 9px 13px; font-weight: 700;}
+QPushButton:hover {background:#E9F0FC; border-color:#C3D7EE;}
+QPushButton#btnCompare {background: #2563EB; border:1px solid #2563EB; color: #FFFFFF; font-size: 13px; padding: 11px 18px;}
+QPushButton#btnCompare:hover {background: #1D4ED8;}
+QPushButton#btnCompareFields {background: #2563EB; color: #FFFFFF; border: 1px solid #1D4ED8; font-size: 13px; padding: 10px 16px;}
+QPushButton#btnCompareFields:hover {background: #1D4ED8; border-color: #1E40AF;}
+QPushButton#btnCompareFields:pressed {background: #1E40AF;}
+QPushButton#btnCompareFields:focus {border: 2px solid #93C5FD;}
+QPushButton#btnExport {background:#EAF2FF; color:#1956BD; border:1px solid #CDE0FA;}
+QPushButton#btnExport:hover {background:#DCEAFF;}
+QLabel#metricNumTotal, QLabel#metricNumSame, QLabel#metricNumDifferent, QLabel#metricNumOnlyA, QLabel#metricNumOnlyB {color:#1C365A; font-size:25px; font-weight:800; border:0;}
+QLabel#metricNumSame {color:#0D937B;}
+QLabel#metricNumDifferent {color:#DA8B27;}
+QLabel#metricNumOnlyA {color:#D15A67;}
+QLabel#metricNumOnlyB {color:#6066D8;}
+QLabel#metricTitleTotal, QLabel#metricTitleSame, QLabel#metricTitleDifferent, QLabel#metricTitleOnlyA, QLabel#metricTitleOnlyB {color:#7B8DA5; font-size:11px; border:0;}
+QTableWidget#resultTable {background:#FFFFFF; alternate-background-color:#FAFCFF; gridline-color:#EFF2F8; border:1px solid #E9EEF5; border-radius:7px; color:#344760; selection-background-color:#E0ECFF; selection-color:#1B3355;}
+QTableWidget::item {padding: 7px 6px;}
+QHeaderView::section {background:#F2F6FC; color:#62748F; padding:10px 8px; font-size:11px; font-weight:700; border:0; border-bottom:1px solid #E0E8F2;}
+QLabel#labelResultCount, QLabel#labelResultTip, QLabel#statusLabel, QLabel#localLabel {color:#8290A5; font-size:11px;}
+QLabel#statusLabel {color:#52739A;}
+QScrollBar:vertical {background:#F3F6FA; width:11px; margin:0;}
+QScrollBar::handle:vertical {background:#D8E0EC; min-height:30px; border-radius:5px;}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {height:0;}
