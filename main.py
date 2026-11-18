@@ -12,7 +12,7 @@ from datetime import date, datetime
 from pathlib import Path
 
 from PySide6.QtCore import Qt, QUrl
-from PySide6.QtGui import QColor, QDesktopServices
+from PySide6.QtGui import QColor, QDesktopServices, QIcon
 from PySide6.QtWidgets import (
     QApplication, QComboBox, QFileDialog, QLabel, QLineEdit, QMessageBox,
     QPushButton, QSpinBox, QTableWidget, QTableWidgetItem, QHeaderView, QCheckBox,
@@ -658,6 +658,7 @@ class ExcelCompareApp:
 def main():
     app = QApplication(sys.argv)
     app.setApplicationName('Excel Compare Pro')
+    app.setWindowIcon(QIcon(str(BASE / 'ExcelComparePro.ico')))
     instance = ExcelCompareApp()
     instance.window.show()
     sys.exit(app.exec())
